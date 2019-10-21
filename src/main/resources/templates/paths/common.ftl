@@ -24,23 +24,18 @@
                 $('.switchTheme').click(function(){
                     $.cookie('theme', $(this).attr('id'));
                     $('.theme').each(function(){
-                        if($.cookie('theme') === "secondary") {
-                            $(this).addClass('bg-secondary').removeClass('bg-dark');
-                        }
-                        if($.cookie('theme') === "dark") {
-                            $(this).addClass('bg-dark').removeClass('bg-secondary');
-                        }
-                    });
-                });
+                        if($.cookie('theme') === "secondary") {$(this).addClass('bg-secondary').removeClass('bg-dark');}
+                        if($.cookie('theme') === "dark") {$(this).addClass('bg-dark').removeClass('bg-secondary');}});
+                    $('.tbl-theme').each(function(){
+                        if($.cookie('theme') === "secondary"){$(this).addClass('thead-light').removeClass('thead-dark');}
+                        if($.cookie('theme') === "dark") {$(this).addClass('thead-dark').removeClass('thead-light');}});});
                 //Подгрузка нужной темы из куков при запуске страницы
                 $('.theme').each(function(){
-                    if($.cookie('theme') === "secondary" && !$(this).hasClass("bg-secondary")) {
-                        $(this).addClass('bg-secondary');
-                    }
-                    if($.cookie('theme') === "dark" && !$(this).hasClass("bg-dark")) {
-                        $(this).addClass('bg-dark');
-                    }
-                });
+                    if($.cookie('theme') === "secondary" && !$(this).hasClass("bg-secondary")) {$(this).addClass('bg-secondary');}
+                    if($.cookie('theme') === "dark" && !$(this).hasClass("bg-dark")) {$(this).addClass('bg-dark');}});
+                $('.tbl-theme').each(function(){
+                    if($.cookie('theme') === "secondary" && !$(this).hasClass("thead-light")) {$(this).addClass('thead-light');}
+                    if($.cookie('theme') === "dark" && !$(this).hasClass("thead-dark")) {$(this).addClass('thead-dark');}});
             });
         </script>
     </head>

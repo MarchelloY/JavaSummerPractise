@@ -2,7 +2,7 @@
 
 <@c.page>
     <table class="table table-striped">
-        <thead class="thead-dark">
+        <thead class="tbl-theme">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Название комнаты</th>
